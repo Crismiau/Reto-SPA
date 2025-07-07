@@ -24,7 +24,7 @@ Este proyecto es una **Single Page Application (SPA)** para la gestión de usuar
 - ✅ Validación de formularios en frontend (campos obligatorios, solo letras en nombre, etc).
 - 🪟 Modal para crear y editar usuarios.
 - 🔄 Renderizado dinámico de la tabla de usuarios.
-- 🧩 Estructura lista para expandirse a otras secciones (cursos, pagos, reportes, etc).
+- 🧩 Estructura lista para expandirse a otras secciones (cursos, pagos, reportes, etc), (SOLO SE IMPLEMENTO USUARIOS)
 
 ---
 
