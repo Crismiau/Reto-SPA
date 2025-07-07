@@ -1,47 +1,37 @@
-import { deleteUser, fetchUsers } from "./api";
-import { showForm } from "./form.js";
-
-
-const tableBody = document.getElementById("userTableBody");
+// dom.js
+import { fetchUsers, deleteUser } from './api.js';
+import { showForm } from './form.js';
 
 export async function renderUserTable() {
-    const users = await fetchUsers();
-    tableBody.innerHTML = "";
+  const tableBody = document.getElementById("userTableBody");
+  tableBody.innerHTML = "";
+  const users = await fetchUsers();
 
-    users.forEach(user => {
-        const tr = document.createElement("tr");
+  users.forEach(user => {
+    const tr = document.createElement("tr");
 
-        tr.innerHTML = `
-            <td>${user.name}</td>
-            <td>${user.email}</td>
-            <td>${user.extensionPhone}</td>
-            <td>${user.phone}</td>
-            <td>${user.enrollNumber}</td>
-            <td>${user.dateOfAdmission}</td>
-            
-            <td>
-            <button class="action-btn edit-btn" data-id ="${user.id}">Editar</button>
-            <button class="action-btn delete-btn" data-id="${user.id}">Eliminar</button>
-            </td>
-            `
-            tableBody.appendChild(tr)
+    tr.innerHTML = `
+      <td>${user.id}</td>
+      <td>${user.name}</td>
+      <td>${user.email}</td>
+      <td>${user.extensionPhone}</td>
+      <td>${user.phone}</td>
+      <td>${user.enrollNumber}</td>
+      <td>${user.dateOfAdmission}</td>
+      <td>
+        <button class="edit-btn" data-id="${user.id}">Editar</button>
+        <button class="delete-btn" data-id="${user.id}">Eliminar</button>
+      </td>
+    `;
+
+    tr.querySelector(".edit-btn").addEventListener("click", () => showForm("edit", user.id));
+    tr.querySelector(".delete-btn").addEventListener("click", async () => {
+      if (confirm("¿Seguro que deseas eliminar este usuario?")) {
+        await deleteUser(user.id);
+        renderUserTable();
+      }
     });
 
+    tableBody.appendChild(tr);
+  });
 }
-
-document.querySelector(".edit-btn").forEach(btn => {
-    btn.onclick = () => showForm("edit", btn.dataset.id);
-
-});
-
-
-document.querySelector(".delete-btn").forEach(btn => {
-    btn.onclick = async () => {
-        const confirmDelete = confirm("¿Deseas eliminar este usuario? 🤨")
-
-        if (confirmDelete) {
-            await deleteUser(btn.dataset.id);
-            renderUserTable();
-        }
-    }
-})

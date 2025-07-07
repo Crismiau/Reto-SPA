@@ -1,23 +1,49 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "name": "Cristian Camilo Agudelo Foronda",
-            "email": "Heycristian26@gmail.com",
-            "extensionPhone": "+57",
-            "phone": "3135443356",
-            "enrollNumber": "78945612378901",
-            "dateOfAdmission": "2021-12-08"
-        },
-
-        {
-            "id": "2",
-            "name": "Carlos Méndez",
-            "email": "carlos@example.com",
-            "extensionPhone": "+57",
-            "phone": "3123344556",
-            "enrollNumber": "45678912345678",
-            "dateOfAdmission": "2022-05-15"
-        }
-    ]
+  "users": [
+    {
+      "id": "d377",
+      "name": "Cristian Camilo Agudelo",
+      "email": "heycristian26@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3135443356",
+      "enrollNumber": "101196207",
+      "dateOfAdmission": "2222-02-20"
+    },
+    {
+      "id": "a123",
+      "name": "Laura Martínez",
+      "email": "laura.martinez@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3101234567",
+      "enrollNumber": "20230001",
+      "dateOfAdmission": "2023-01-15"
+    },
+    {
+      "id": "b456",
+      "name": "Juan Pérez",
+      "email": "juan.perez@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3209876543",
+      "enrollNumber": "20230002",
+      "dateOfAdmission": "2023-02-10"
+    },
+    {
+      "id": "c789",
+      "name": "Ana Gómez",
+      "email": "ana.gomez@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3001122334",
+      "enrollNumber": "20230003",
+      "dateOfAdmission": "2023-03-05"
+    },
+    {
+      "id": "d012",
+      "name": "Pedro Ruiz",
+      "email": "pedro.ruiz@gmail.com",
+      "extensionPhone": "+57",
+      "phone": "3112233445",
+      "enrollNumber": "20230004",
+      "dateOfAdmission": "2023-04-20"
+    }
+  ]
 }
